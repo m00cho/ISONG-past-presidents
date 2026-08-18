@@ -5,7 +5,7 @@ d3.csv("presidents.csv")
       d.Year_start = +d.Year_start;
     });
 
-    // 오래된 회장부터 최신 회장 순서
+    // Oldest president to newest
     data.sort(function(a, b) {
       return a.Year_start - b.Year_start;
     });
@@ -65,7 +65,7 @@ d3.csv("presidents.csv")
         d3.select(this)
           .append("img")
           .attr("src", d.Image.trim())
-          .attr("alt", "DNA-related illustration");
+          .attr("alt", "Omics illustration");
       }
     });
 
