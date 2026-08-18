@@ -5,6 +5,7 @@ d3.csv("presidents.csv")
       d.Year_start = +d.Year_start;
     });
 
+    // Oldest president to newest
     data.sort(function(a, b) {
       return a.Year_start - b.Year_start;
     });
@@ -17,20 +18,6 @@ d3.csv("presidents.csv")
       .enter()
       .append("div")
       .attr("class", "timeline-item");
-
-    // Image
-    const imageBox = items
-      .append("div")
-      .attr("class", "timeline-image");
-
-    imageBox.each(function(d) {
-      if (d.Image && d.Image.trim() !== "") {
-        d3.select(this)
-          .append("img")
-          .attr("src", d.Image.trim())
-          .attr("alt", "Omics illustration");
-      }
-    });
 
     // Year
     items
@@ -68,7 +55,27 @@ d3.csv("presidents.csv")
         }
       });
 
+    // Image
+    const imageBox = items
+      .append("div")
+      .attr("class", "timeline-image");
+
+    imageBox.each(function(d) {
+      if (d.Image && d.Image.trim() !== "") {
+        d3.select(this)
+          .append("img")
+          .attr("src", d.Image.trim())
+          .attr("alt", "Omics illustration");
+      }
+    });
+
   })
   .catch(function(error) {
+
     console.error("Error loading presidents.csv:", error);
+
+    d3.select("#timeline")
+      .append("p")
+      .text("Unable to load the presidents data.");
+
   });
