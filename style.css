@@ -38,7 +38,7 @@ body {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 130px;
+  left: 288px;
   top: 10px;
   bottom: 10px;
   width: 2px;
@@ -47,25 +47,24 @@ body {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 100px 60px 1fr 140px;
+  grid-template-columns: 150px 90px 60px 1fr;
   align-items: center;
+  column-gap: 16px;
   position: relative;
   margin-bottom: 44px;
-  column-gap: 16px;
 }
 
 .timeline-image {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .timeline-image img {
-  max-width: 120px;
-  max-height: 90px;
-  width: auto;
-  height: auto;
-  border-radius: 8px;
+  width: 140px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .year {
@@ -73,7 +72,6 @@ body {
   font-size: 17px;
   font-weight: 600;
   color: #555555;
-  padding-top: 3px;
 }
 
 .timeline-marker {
