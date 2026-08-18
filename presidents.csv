@@ -1,36 +1,36 @@
 Name,Credential,Year_start,Image
-Random1,"RN, PhD",1994,image19.jpg
-Random2,PhD,1995,image8.jpg
-Random3,"RN, FAAN",1996,image8.jpg
-Random4,"RN, PhD",1997,image2.jpg
-Random5,PhD,1998,image9.jpg
-Random6,"RN, FAAN",1999,image27.jpg
-Random7,"RN, PhD",2000,image28.jpg
-Random8,PhD,2001,image25.jpg
-Random9,"RN, FAAN",2002,image8.jpg
-Random10,"RN, PhD",2003,image12.jpg
-Random11,PhD,2004,image8.jpg
-Random12,"RN, FAAN",2005,image8.jpg
-Random13,"RN, PhD",2006,image3.jpg
-Random14,PhD,2007,image22.jpg
-Random15,"RN, FAAN",2008,image26.jpg
-Random16,"RN, PhD",2009,image25.jpg
-Random17,PhD,2010,image14.jpg
-Random18,"RN, FAAN",2011,image4.jpg
-Random19,"RN, PhD",2012,image18.jpg
-Random20,PhD,2013,image11.jpg
-Random21,"RN, FAAN",2014,image10.jpg
-Random22,"RN, PhD",2015,image19.jpg
-Random23,PhD,2016,image17.jpg
-Random24,"RN, FAAN",2017,image4.jpg
-Random25,"RN, PhD",2018,image19.jpg
-Random26,PhD,2019,image1.jpg
-Random27,"RN, FAAN",2020,image7.jpg
-Random28,"RN, PhD",2021,image26.jpg
-Random29,PhD,2022,image12.jpg
-Random30,"RN, FAAN",2023,image3.jpg
-Random31,"RN, PhD",2024,image6.jpg
-Random32,PhD,2025,image4.jpg
-Random33,"RN, FAAN",2026,image6.jpg
-Random34,"RN, PhD",2027,image9.jpg
-Random35,PhD,2028,image20.jpg
+Random1,"RN, PhD",1994,images/image19.jpg
+Random2,PhD,1995,images/image8.jpg
+Random3,"RN, FAAN",1996,images/image8.jpg
+Random4,"RN, PhD",1997,images/image2.jpg
+Random5,PhD,1998,images/image9.jpg
+Random6,"RN, FAAN",1999,images/image27.jpg
+Random7,"RN, PhD",2000,images/image28.jpg
+Random8,PhD,2001,images/image25.jpg
+Random9,"RN, FAAN",2002,images/image8.jpg
+Random10,"RN, PhD",2003,images/image12.jpg
+Random11,PhD,2004,images/image8.jpg
+Random12,"RN, FAAN",2005,images/image8.jpg
+Random13,"RN, PhD",2006,images/image3.jpg
+Random14,PhD,2007,images/image22.jpg
+Random15,"RN, FAAN",2008,images/image26.jpg
+Random16,"RN, PhD",2009,images/image25.jpg
+Random17,PhD,2010,images/image14.jpg
+Random18,"RN, FAAN",2011,images/image4.jpg
+Random19,"RN, PhD",2012,images/image18.jpg
+Random20,PhD,2013,images/image11.jpg
+Random21,"RN, FAAN",2014,images/image10.jpg
+Random22,"RN, PhD",2015,images/image19.jpg
+Random23,PhD,2016,images/image17.jpg
+Random24,"RN, FAAN",2017,images/image4.jpg
+Random25,"RN, PhD",2018,images/image19.jpg
+Random26,PhD,2019,images/image1.jpg
+Random27,"RN, FAAN",2020,images/image7.jpg
+Random28,"RN, PhD",2021,images/image26.jpg
+Random29,PhD,2022,images/image12.jpg
+Random30,"RN, FAAN",2023,images/image3.jpg
+Random31,"RN, PhD",2024,images/image6.jpg
+Random32,PhD,2025,images/image4.jpg
+Random33,"RN, FAAN",2026,images/image6.jpg
+Random34,"RN, PhD",2027,images/image9.jpg
+Random35,PhD,2028,images/image20.jpg
