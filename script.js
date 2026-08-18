@@ -5,7 +5,7 @@ d3.csv("presidents.csv")
       d.Year_start = +d.Year_start;
     });
 
-    // Oldest president to newest
+    // Oldest to newest
     data.sort(function(a, b) {
       return a.Year_start - b.Year_start;
     });
@@ -19,7 +19,7 @@ d3.csv("presidents.csv")
       .append("div")
       .attr("class", "timeline-item");
 
-    // Year
+    // 1. Year
     items
       .append("div")
       .attr("class", "year")
@@ -27,7 +27,7 @@ d3.csv("presidents.csv")
         return d.Year_start;
       });
 
-    // Timeline marker
+    // 2. Timeline marker
     const marker = items
       .append("div")
       .attr("class", "timeline-marker");
@@ -36,7 +36,7 @@ d3.csv("presidents.csv")
       .append("div")
       .attr("class", "timeline-dot");
 
-    // President information
+    // 3. President name + credentials
     const info = items
       .append("div")
       .attr("class", "president-info");
@@ -45,28 +45,33 @@ d3.csv("presidents.csv")
       .append("div")
       .attr("class", "president-name")
       .html(function(d) {
+
         const name = d.Name ? d.Name.trim() : "";
         const credential = d.Credential ? d.Credential.trim() : "";
 
         if (credential !== "") {
           return `${name}, <span class="credential">${credential}</span>`;
-        } else {
-          return name;
         }
+
+        return name;
       });
 
-    // Image
+    // 4. Image
     const imageBox = items
       .append("div")
       .attr("class", "timeline-image");
 
     imageBox.each(function(d) {
+
       if (d.Image && d.Image.trim() !== "") {
+
         d3.select(this)
           .append("img")
           .attr("src", d.Image.trim())
           .attr("alt", "Omics illustration");
+
       }
+
     });
 
   })
