@@ -47,10 +47,25 @@ body {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 100px 60px 1fr;
-  align-items: start;
+  grid-template-columns: 100px 60px 1fr 140px;
+  align-items: center;
   position: relative;
   margin-bottom: 44px;
+  column-gap: 16px;
+}
+
+.timeline-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-image img {
+  max-width: 120px;
+  max-height: 90px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
 }
 
 .year {
@@ -108,9 +123,20 @@ body {
   }
 
   .timeline-item {
-    grid-template-columns: 45px 1fr;
-    margin-bottom: 38px;
-  }
+  grid-template-columns: 45px 1fr;
+  margin-bottom: 38px;
+}
+
+  .timeline-image {
+  grid-column: 2;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.timeline-image img {
+  max-width: 100px;
+  max-height: 75px;
+}
 
   .year {
     grid-column: 2;
