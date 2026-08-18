@@ -31,31 +31,97 @@ body {
   color: #666666;
 }
 
-/* Timeline items */
+
+/* =========================
+   Timeline
+   ========================= */
+
+.timeline {
+  position: relative;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+
+  /* 100px year + half of 60px marker */
+  left: 130px;
+
+  top: 35px;
+  bottom: 35px;
+
+  width: 2px;
+  background-color: #dddddd;
+}
+
+
+/* =========================
+   Individual row
+   ========================= */
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 100px 1fr 160px;
-  align-items: center;
-  column-gap: 28px;
 
-  padding: 18px 0;
-  border-bottom: 1px solid #eeeeee;
+  /* Year | timeline | president | image */
+  grid-template-columns: 100px 60px 1fr 180px;
+
+  align-items: center;
+  position: relative;
+
+  column-gap: 16px;
+  min-height: 120px;
 }
 
-/* Year */
+
+/* =========================
+   Year
+   ========================= */
 
 .year {
   text-align: right;
   font-size: 18px;
   font-weight: 600;
-  color: #444444;
+  color: #555555;
 }
 
-/* Name and credentials */
+
+/* =========================
+   Timeline dot
+   ========================= */
+
+.timeline-marker {
+  position: relative;
+  height: 100%;
+}
+
+.timeline-dot {
+  position: absolute;
+
+  left: 24px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background-color: #333333;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #333333;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   President
+   ========================= */
 
 .president-info {
-  padding-left: 0;
+  padding-left: 5px;
 }
 
 .president-name {
@@ -69,7 +135,10 @@ body {
   color: #555555;
 }
 
-/* Image */
+
+/* =========================
+   Image
+   ========================= */
 
 .timeline-image {
   display: flex;
@@ -78,23 +147,18 @@ body {
 }
 
 .timeline-image img {
-  width: 150px;
-  height: 90px;
+  width: 170px;
+  height: 95px;
+
   object-fit: cover;
+
   border-radius: 10px;
 }
 
-/* Hide old timeline marker completely */
 
-.timeline-marker {
-  display: none;
-}
-
-.timeline::before {
-  display: none;
-}
-
-/* Mobile */
+/* =========================
+   Mobile
+   ========================= */
 
 @media (max-width: 600px) {
 
@@ -106,16 +170,41 @@ body {
     font-size: 34px;
   }
 
+  .timeline::before {
+    left: 20px;
+    top: 25px;
+    bottom: 25px;
+  }
+
   .timeline-item {
-    grid-template-columns: 1fr;
-    row-gap: 8px;
-    padding: 22px 0;
+    grid-template-columns: 40px 1fr;
+    column-gap: 12px;
+    min-height: 0;
+    padding: 20px 0;
+  }
+
+  .timeline-marker {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+  }
+
+  .timeline-dot {
+    left: 14px;
+    top: 14px;
+    transform: none;
   }
 
   .year {
+    grid-column: 2;
     text-align: left;
-    font-size: 15px;
+
+    font-size: 14px;
     color: #777777;
+  }
+
+  .president-info {
+    grid-column: 2;
+    padding-left: 0;
   }
 
   .president-name {
@@ -123,12 +212,13 @@ body {
   }
 
   .timeline-image {
+    grid-column: 2;
     justify-content: flex-start;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 
   .timeline-image img {
-    width: 150px;
+    width: 160px;
     height: 90px;
   }
 }
