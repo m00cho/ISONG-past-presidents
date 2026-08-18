@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 850px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 70px 30px;
 }
@@ -31,6 +31,10 @@ body {
   color: #666666;
 }
 
+/* =========================
+   Timeline
+   ========================= */
+
 .timeline {
   position: relative;
 }
@@ -38,41 +42,37 @@ body {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 288px;
+  left: 130px;
   top: 10px;
   bottom: 10px;
   width: 2px;
   background-color: #dddddd;
 }
 
+/* =========================
+   Individual president
+   ========================= */
+
 .timeline-item {
   display: grid;
-  grid-template-columns: 150px 90px 60px 1fr;
+  grid-template-columns: 100px 60px 1fr 140px;
   align-items: center;
-  column-gap: 16px;
   position: relative;
   margin-bottom: 44px;
+  column-gap: 16px;
 }
 
-.timeline-image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.timeline-image img {
-  width: 140px;
-  height: 85px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+/* Year */
 
 .year {
   text-align: right;
   font-size: 17px;
   font-weight: 600;
   color: #555555;
+  padding-top: 3px;
 }
+
+/* Timeline marker */
 
 .timeline-marker {
   position: relative;
@@ -92,6 +92,10 @@ body {
   z-index: 2;
 }
 
+/* =========================
+   President information
+   ========================= */
+
 .president-info {
   padding-left: 5px;
 }
@@ -107,13 +111,43 @@ body {
   color: #555555;
 }
 
+/* =========================
+   Images
+   ========================= */
+
+.timeline-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-image img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
 @media (max-width: 600px) {
+
   .container {
     padding: 45px 22px;
   }
 
+  .page-header {
+    margin-bottom: 45px;
+  }
+
   .page-header h1 {
     font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 16px;
   }
 
   .timeline::before {
@@ -121,20 +155,9 @@ body {
   }
 
   .timeline-item {
-  grid-template-columns: 45px 1fr;
-  margin-bottom: 38px;
-}
-
-  .timeline-image {
-  grid-column: 2;
-  margin-top: 10px;
-  justify-content: flex-start;
-}
-
-.timeline-image img {
-  max-width: 100px;
-  max-height: 75px;
-}
+    grid-template-columns: 45px 1fr;
+    margin-bottom: 38px;
+  }
 
   .year {
     grid-column: 2;
@@ -146,7 +169,8 @@ body {
 
   .timeline-marker {
     grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
+    position: relative;
   }
 
   .timeline-dot {
@@ -161,5 +185,17 @@ body {
 
   .president-name {
     font-size: 18px;
+  }
+
+  .timeline-image {
+    grid-column: 2;
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+
+  .timeline-image img {
+    width: 120px;
+    height: 75px;
+    object-fit: cover;
   }
 }
